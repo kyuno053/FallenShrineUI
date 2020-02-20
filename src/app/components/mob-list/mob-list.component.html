@@ -1,0 +1,32 @@
+<div class="main-content">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card">
+          <div class="card-header card-header-danger">
+            <h4 class="card-title ">Monstres supportés</h4>
+          </div>
+          <div class="card-body">
+            <div class="table-responsive">
+              <table class="table">
+                <thead class=" text-primary">
+                <th></th>
+                </thead>
+                <tbody>
+                <tr *ngFor="let row of processed" class="col-12">
+                  <td *ngFor="let mob of row">
+                    <div class="card col-12">
+                      <img src="{{mob.image}}" class="img-fluid" style="height: 150px;width: 150px">
+                      <span class="card-description" style="text-align: center">{{mob.nom}}</span>
+                    </div>
+                  </td>
+                </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
