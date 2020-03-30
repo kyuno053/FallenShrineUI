@@ -11,7 +11,7 @@ export class MobListComponent implements OnInit {
 
     private mobs: Mob[];
     private service: DataService;
-    private processed = [];
+     processed = [];
 
     constructor(service: DataService) {
         this.service = service;

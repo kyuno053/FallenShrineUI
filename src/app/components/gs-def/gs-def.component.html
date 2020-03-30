@@ -5,18 +5,18 @@
         <h4 class="card-title ">Défenses siège enregistrés</h4>
       </div>
       <div class="col-md-12" >
-        <div class="card" *ngFor="let user of data.users" (click)="toggleIsVisible(user.userId)" >
+        <div class="card" *ngFor="let user of data" (click)="toggleIsVisible(user.userId)" >
           <div class="card-header card-header-danger" style="cursor: pointer;">
-            <h4 class="card-title ">{{user.username}}</h4>
+            <h4 class="card-title ">{{user.userName}}</h4>
           </div>
           <div class="card-body" *ngIf="isvisible[user.userId] === true" >
             <div class="table-responsive">
-              <table class="table" *ngIf="user.siege.nat4def.length !== 0">
+              <table class="table" *ngIf="user.nat4def.length !== 0">
                 <thead class=" text-primary">
                 <th></th>
                 </thead>
                 <tbody>
-                <tr *ngFor="let def4 of user.siege.nat4def" [class.bg-success]="def4.isStrong">
+                <tr *ngFor="let def4 of user.nat4def" [class.bg-success]="def4.isStrong">
                   <td>
                     <div class="card col-12">
                       <img  *ngIf="mapMobs(def4.first) !== undefined" src="{{mapMobs(def4.first).image}}" class="img-fluid center" style="height: 150px;width: 150px">
@@ -41,12 +41,12 @@
                 </tr>
                 </tbody>
               </table>
-              <table class="table" *ngIf="user.siege.nat5def.length !== 0" >
+              <table class="table" *ngIf="user.nat5def.length !== 0" >
                 <thead class=" text-primary">
                 <th></th>
                 </thead>
                 <tbody>
-                <tr *ngFor="let def5 of user.siege.nat5def" [class.bg-success]="def5.isStrong">
+                <tr *ngFor="let def5 of user.nat5def" [class.bg-success]="def5.isStrong">
                   <td>
                     <div class="card col-12">
                       <img  *ngIf="mapMobs(def5.first) !== undefined" src="{{mapMobs(def5.first).image}}" class="img-fluid center" style="height: 150px;width: 150px">
@@ -71,10 +71,10 @@
                 </tr>
                 </tbody>
               </table>
-              <div class="card bg-warning" *ngIf="user.siege.nat4def.length === 0">
+              <div class="card bg-warning" *ngIf="user.nat4def.length === 0">
                 <span class="h4 ">Aucune def 4nat enregistrée</span>
               </div>
-              <div class="card bg-warning"  *ngIf="user.siege.nat5def.length === 0">
+              <div class="card bg-warning"  *ngIf="user.nat5def.length === 0">
                 <span class="h4 ">Aucune def 5nat enregistrée</span>
               </div>
             </div>

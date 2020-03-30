@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {DataService} from '../../service/data.service';
-import {Data} from '../../models/userData';
+import { User} from '../../models/userData';
 import {Mob} from '../../models/mob';
 
 @Component({
@@ -17,7 +17,7 @@ import {Mob} from '../../models/mob';
 })
 export class GsDefComponent implements OnInit {
 
-    private data: Data;
+    data: User[];
     private mobs: Mob[];
     private service: DataService;
     private isvisible: { [id: string]: boolean };
@@ -28,9 +28,9 @@ export class GsDefComponent implements OnInit {
 
     ngOnInit() {
         this.service.getUsersData().subscribe(
-            (remote: Data) => {
+            (remote: User[]) => {
                 this.data = remote;
-                remote.users.forEach(item => {
+                remote.forEach(item => {
                     this.isvisible = {...this.isvisible, [item.userId]: true}
                 });
             }

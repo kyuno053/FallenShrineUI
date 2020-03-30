@@ -1,14 +1,6 @@
-export interface Data {
-    users: User[]
-}
-
 export interface User {
     userId: string,
-    username: string,
-    siege: Siege
-}
-
-export interface Siege {
+    userName: string,
     nat5def: Def[],
     nat4def: Def[],
     lock: Lock
