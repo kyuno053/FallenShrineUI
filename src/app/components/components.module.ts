@@ -7,6 +7,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { GsDefComponent } from './gs-def/gs-def.component';
 import { MobListComponent } from './mob-list/mob-list.component';
+import { HelpComponent } from './help/help.component';
 
 @NgModule({
   imports: [
@@ -18,7 +19,8 @@ import { MobListComponent } from './mob-list/mob-list.component';
     NavbarComponent,
     SidebarComponent,
     GsDefComponent,
-    MobListComponent
+    MobListComponent,
+    HelpComponent
   ],
   exports: [
     FooterComponent,

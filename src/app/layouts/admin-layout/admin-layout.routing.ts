@@ -5,6 +5,7 @@ import {UserProfileComponent} from '../../user-profile/user-profile.component';
 import {IconsComponent} from '../../icons/icons.component';
 import {GsDefComponent} from '../../components/gs-def/gs-def.component';
 import {MobListComponent} from '../../components/mob-list/mob-list.component';
+import {HelpComponent} from '../../components/help/help.component';
 
 export const AdminLayoutRoutes: Routes = [
     // {
@@ -53,5 +54,6 @@ export const AdminLayoutRoutes: Routes = [
     {path: 'user-profile', component: UserProfileComponent},
     {path: 'gs-defs', component: GsDefComponent},
     {path: 'mob-list', component: MobListComponent},
+    {path: 'commands', component: HelpComponent},
     {path: 'icons', component: IconsComponent}
 ];

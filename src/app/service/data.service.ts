@@ -9,7 +9,7 @@ import {User} from '../models/userData';
 })
 export class DataService {
 
-    private apiServer = 'http://kyuno.fr:3250';
+    private apiServer = 'http://kyuno.fr:3350';
 
     constructor(private httpClient: HttpClient) {
     }
